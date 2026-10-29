@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f6fb"/><stop offset="1" stop-color="#d9e0ee"/></linearGradient>
+<radialGradient id="sh"><stop offset="0" stop-color="#14181f" stop-opacity="0.28"/><stop offset="1" stop-color="#14181f" stop-opacity="0"/></radialGradient>
+<filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+
+<linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2447f5"/><stop offset="0.55" stop-color="#7c3aed"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+<linearGradient id="body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3a4152"/><stop offset="0.5" stop-color="#1b1f2a"/><stop offset="1" stop-color="#3a4152"/></linearGradient>
+
+</defs>
+<rect width="600" height="600" fill="url(#bg)"/>
+<circle cx="500" cy="90" r="150" fill="#ffffff" opacity="0.35"/>
+<ellipse cx="300" cy="540" rx="150" ry="14" fill="url(#sh)"/>
+
+<rect x="414" y="190" width="6" height="56" rx="3" fill="#2b303c"/>
+<rect x="180" y="170" width="6" height="40" rx="3" fill="#2b303c"/><rect x="180" y="222" width="6" height="40" rx="3" fill="#2b303c"/>
+<rect x="186" y="70" width="228" height="456" rx="40" fill="url(#body)"/>
+<rect x="195" y="79" width="210" height="438" rx="32" fill="#06080c"/>
+<rect x="199" y="83" width="202" height="430" rx="29" fill="url(#scr)"/>
+<circle cx="260" cy="400" r="120" fill="#fff" opacity="0.10"/><circle cx="360" cy="150" r="90" fill="#fff" opacity="0.10"/>
+<path d="M199 360 C 250 320 320 410 401 350 L401 484 Q401 513 372 513 L228 513 Q199 513 199 484Z" fill="#14181f" opacity="0.28"/>
+<circle cx="300" cy="104" r="6" fill="#06080c"/>
+<text x="300" y="215" text-anchor="middle" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="70" font-weight="800" fill="#fff">9:41</text>
+<text x="300" y="248" text-anchor="middle" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#fff" opacity="0.85">Friday, 30 October</text>
+<rect x="222" y="300" width="75" height="75" rx="20" fill="#fff" opacity="0.22"/><rect x="303" y="300" width="75" height="75" rx="20" fill="#fff" opacity="0.22"/>
+<circle cx="259" cy="337" r="16" fill="#fff" opacity="0.8"/><rect x="326" y="324" width="28" height="26" rx="8" fill="#fff" opacity="0.8"/>
+<rect x="222" y="392" width="156" height="14" rx="7" fill="#fff" opacity="0.28"/><rect x="222" y="416" width="110" height="14" rx="7" fill="#fff" opacity="0.18"/>
+<rect x="262" y="496" width="76" height="5" rx="2.5" fill="#fff" opacity="0.85"/>
+
+</svg>

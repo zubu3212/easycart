@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f6fb"/><stop offset="1" stop-color="#d9e0ee"/></linearGradient>
+<radialGradient id="sh"><stop offset="0" stop-color="#14181f" stop-opacity="0.28"/><stop offset="1" stop-color="#14181f" stop-opacity="0"/></radialGradient>
+<filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+
+<linearGradient id="strap" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1f2430"/><stop offset="0.5" stop-color="#394052"/><stop offset="1" stop-color="#1f2430"/></linearGradient>
+<linearGradient id="case" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b6477"/><stop offset="1" stop-color="#1c212c"/></linearGradient>
+
+</defs>
+<rect width="600" height="600" fill="url(#bg)"/>
+<circle cx="500" cy="90" r="150" fill="#ffffff" opacity="0.35"/>
+<ellipse cx="300" cy="574" rx="110" ry="10" fill="url(#sh)"/>
+
+<path d="M236 30 L364 30 L372 196 L228 196Z" fill="url(#strap)"/>
+<path d="M228 404 L372 404 L364 572 L236 572Z" fill="url(#strap)"/>
+<circle cx="300" cy="470" r="5" fill="#0d1017"/><circle cx="300" cy="496" r="5" fill="#0d1017"/><circle cx="300" cy="522" r="5" fill="#0d1017"/><circle cx="300" cy="548" r="5" fill="#0d1017"/>
+<rect x="394" y="248" width="14" height="46" rx="6" fill="#2447f5"/>
+<rect x="206" y="176" width="188" height="248" rx="58" fill="url(#case)"/>
+<rect x="216" y="186" width="168" height="228" rx="48" fill="#05070b"/>
+<text x="300" y="240" text-anchor="middle" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#fff">10:09</text>
+<text x="300" y="262" text-anchor="middle" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#8a93a4" letter-spacing="1.5">FRI 30</text>
+<g transform="translate(300 332)">
+ <circle r="46" fill="none" stroke="#ef4444" stroke-opacity="0.25" stroke-width="10"/><circle r="46" fill="none" stroke="#ef4444" stroke-width="10" stroke-linecap="round" stroke-dasharray="190 300" transform="rotate(-90)"/>
+ <circle r="31" fill="none" stroke="#22c55e" stroke-opacity="0.25" stroke-width="10"/><circle r="31" fill="none" stroke="#22c55e" stroke-width="10" stroke-linecap="round" stroke-dasharray="130 300" transform="rotate(-90)"/>
+ <circle r="16" fill="none" stroke="#22d3ee" stroke-opacity="0.25" stroke-width="10"/><circle r="16" fill="none" stroke="#22d3ee" stroke-width="10" stroke-linecap="round" stroke-dasharray="70 300" transform="rotate(-90)"/>
+</g>
+<text x="300" y="398" text-anchor="middle" font-family="Manrope, Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#fb7185">72 bpm</text>
+
+</svg>
