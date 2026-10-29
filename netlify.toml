@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+
+[functions]
+  directory = "server/netlify/functions"
+  node_bundler = "esbuild"
+
+# Express API (server/) runs as one Netlify Function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+# React Router: every other path loads the single-page app
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Local: `netlify dev` serves the API function; run `npm run dev` in client/ for the Vite frontend with hot reload
+[dev]
+  framework = "#static"
+  publish = "client/dist"

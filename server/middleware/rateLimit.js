@@ -11,7 +11,7 @@ export function rateLimit({ windowMs, max, message = "Too many attempts, please 
 
   return (req, res, next) => {
     const now = Date.now();
-    const key = req.ip || "unknown";
+    const key = req.headers["x-nf-client-connection-ip"] || req.ip || "unknown"; // Netlify sends the real client IP
     let h = hits.get(key);
     if (!h || h.reset <= now) {
       h = { count: 0, reset: now + windowMs };

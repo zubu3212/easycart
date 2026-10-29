@@ -91,3 +91,10 @@ model OrderItem {
   price     Int
   qty       Int
 }
+
+// Server-side secrets generated on first start (e.g. the JWT signing key on Netlify when JWT_SECRET is not set)
+model AppSecret {
+  name      String   @id
+  value     String
+  createdAt DateTime @default(now())
+}

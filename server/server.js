@@ -10,17 +10,18 @@ import productRoutes from "./routes/products.js";
 import orderRoutes from "./routes/orders.js";
 import adminRoutes from "./routes/admin.js";
 
-const isProd = process.env.NODE_ENV === "production" || !!process.env.VERCEL;
+const isProd = process.env.NODE_ENV === "production" || !!process.env.VERCEL || !!process.env.NETLIFY;
 
 // ---- Fail early with a clear message instead of a mysterious 500 later ----
+// (On Netlify a missing JWT_SECRET is fine: netlify.js generates one and keeps it in the database.)
 const secret = process.env.JWT_SECRET;
-if (!secret) throw new Error("JWT_SECRET is missing. Set it in server/.env (or in the Vercel environment variables).");
-if (isProd && (secret === "change_this_secret" || secret.length < 32))
+if (!secret && !process.env.NETLIFY) throw new Error("JWT_SECRET is missing. Set it in server/.env (or in the Vercel environment variables).");
+if (secret && isProd && (secret === "change_this_secret" || secret.length < 32))
   throw new Error("JWT_SECRET is too weak for production. Use a random string of 32+ characters.");
 
 const origins = (process.env.CLIENT_URL || "").split(",").map((s) => s.trim().replace(/\/+$/, "")).filter(Boolean);
 if (isProd && origins.length === 0)
-  console.warn("CLIENT_URL is not set: browsers on other domains will be blocked by CORS.");
+  console.warn("CLIENT_URL is not set: browsers on other domains will be blocked by CORS (same-site requests still work).");
 
 const app = express();
 if (process.env.VERCEL) app.set("trust proxy", 1); // real client IP behind Vercel (rate limiting)
@@ -48,9 +49,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Server error" });
 });
 
-// Local only: Vercel runs the exported app itself.
+// Local only: Vercel and Netlify run the exported app themselves.
 // (No top-level await here, because Vercel may compile this file to CommonJS.)
-if (!process.env.VERCEL) {
+if (!process.env.VERCEL && !process.env.NETLIFY) {
   const PORT = process.env.PORT || 5000;
   prisma
     .$connect()
