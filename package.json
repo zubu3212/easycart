@@ -1,0 +1,10 @@
+{
+  "name": "easycart",
+  "private": true,
+  "scripts": {
+    "build": "npm ci --prefix server && npm ci --prefix client && npm run build --prefix server && npm run build --prefix client"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
